@@ -1,9 +1,15 @@
+import java.text.DecimalFormat;
+
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
+        task5();
+        task6();
+        task7();
+        task8();
     }
 
 
@@ -54,5 +60,53 @@ public class Main {
                 System.out.println("Месяц " + a + " ,сумма накоплений " + sum);
                 a++;
             }
+    }
+
+    public static void task5() {
+        System.out.println("Задание 5");
+        double sum = 15_000;
+        int a=1;
+        while (sum < 12_000_000) {
+            sum = sum + sum * 0.07;
+            if (a % 6 == 0) {
+                System.out.println("Месяц " + a + " ,сумма накоплений " + sum);
+                a++;
+            }
+        }
+    }
+
+    public static void task6() {
+        System.out.println("Задание 6");
+        double sum = 15_000;
+        int a = 1;
+        DecimalFormat decimalFormat = new DecimalFormat();
+        while (a < 100) {
+            sum = sum + sum * 0.07;
+            if (a % 6 == 0) {
+                System.out.println("Месяц " + a + " ,сумма накоплений " + decimalFormat.format(sum));
+                a++;
+            }
+        }
+    }
+    public static void task7() {
+            System.out.println("Задание 7");
+            int friday = 4;
+            while (friday < 31) {
+                System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+                friday += 7;
+            }
+
+        }
+
+    public static void task8() {
+        System.out.println("Задание 8");
+        int now = 2023;
+        int past = now - 200;
+        int future = now + 100;
+        for (int a=past; a<future; a++) {
+            if (a % 79 ==0) {
+                System.out.println(a);
+            }
+        }
     }
     }
